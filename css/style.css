@@ -1,0 +1,197 @@
+/* 设置 html 和 body 的最小高度和宽度，并添加圆角 */
+html, body {
+  min-height: 100vh;
+  min-width: 50vw;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* 防止滚动条影响圆角效果 */
+}
+
+body {
+  font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  background-color: white;
+  padding-top: 10px;      /* 上边 */
+  padding-right: 20px; /* 右边 */
+  padding-bottom: 20px;/* 下边 */
+  padding-left: 20px;  /* 左边 */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  text-align: center;
+
+}
+
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+li:first-child{
+  margin-top: 50px;
+}
+li:hover {
+  background-color: #e9ecef;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button[type="submit"] {
+  margin-top: 15px;
+  background-color: #3498db;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+.instructions {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+/* 添加上传和下载按钮的样式 */
+#uploadJsonForm,
+#downloadJsonButton {
+  margin-top: 20px;
+}
+
+#uploadJsonForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#uploadJsonForm input[type="file"] {
+  margin-bottom: 15px;
+}
+
+#downloadJsonButton {
+  background-color: #e67e22;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#downloadJsonButton:hover {
+  background-color: #d35400;
+}
+
+/* 限制 key 和 url 的显示宽度 */
+.key-display,
+.url-display {
+  max-width: 100px; /* 限制显示宽度 */
+  white-space: nowrap; /* 禁止换行 */
+  overflow: hidden; /* 超出部分隐藏 */
+  text-overflow: ellipsis; /* 超出部分用 ... 表示 */
+  cursor: pointer; /* 鼠标悬浮时显示手型 */
+  font-weight: bold;
+}
+
+/* 浮动块级元素样式 */
+.json-tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: left; /* 左对齐 */
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1000; /* 确保 Tooltip 在最上层 */
+  bottom: 125%; /* 显示在元素上方 */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: normal; /* 允许换行 */
+  word-wrap: break-word; /* 长单词换行 */
+  max-width: 250px; /* 最大宽度 */  
+  width: max-content; /* 宽度根据内容自适应 */
+}
+
+/* 鼠标悬浮时显示浮动块级元素 */
+li:hover .json-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+#shortcutList{
+  max-height: 50vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: -60px;
+}
+/* 自定义 hr 样式 */
+.custom-hr {
+  border: 0;
+  height: 3px;
+  background-color: #000; /* 黑色 */
+  margin: 20px 0; /* 上下边距 */
+}

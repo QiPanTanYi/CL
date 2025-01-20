@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ctrl L 扩展</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ctrl L 扩展</h1>
+      <ul id="shortcutList"></ul>
+      <form id="addShortcutForm">
+        <input type="text" id="keyInput" placeholder="快捷键" required />
+        <input type="url" id="urlInput" placeholder="网址" required />
+        <button type="submit">添加快捷方式</button>
+      </form>
+      <hr class="custom-hr" />
+      <!-- 添加上传 JSON 文件的表单 -->
+      <form id="uploadJsonForm">
+        <input type="file" id="jsonFileInput" accept=".json" required />
+        <button type="submit">上传 JSON 文件</button>
+      </form>
+      <!-- 添加下载 JSON 文件的按钮 -->
+      <button id="downloadJsonButton">下载 Favorites.json</button>
+      <p class="instructions">
+        使用方法：在地址栏输入"cl"后按空格，然后输入快捷键。
+      </p>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

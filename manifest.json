@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Ctrl L 扩展",
+  "description": "浏览器搜索框自定义快捷词",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "32": "images/favicon-32x32.png"
+    }
+  },
+  "icons": {
+    "32": "images/favicon-32x32.png"
+  },
+  "permissions": [
+    "storage",
+    "omnibox"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "omnibox": {
+    "keyword": "cl"
+  }
+}
+
